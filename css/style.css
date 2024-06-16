@@ -24,6 +24,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  margin: 0;
 }
 
 h1,
@@ -53,4 +54,47 @@ button {
 
 button:focus {
   outline: 1px solid var(--color-accent);
+}
+/* Header */
+.header {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem; /*양쪽 모서리 기둥에 여백을 줌*/
+  display: flex; /* 나란히 배치 */
+  justify-content: space-between; /*요소들 사이에 여백*/
+  align-items: center; /*수직정렬*/
+}
+
+.header_logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header_logo_img {
+  width: 36px;
+  height: 36px;
+}
+
+.header_logo_title {
+  font-size: 1.8rem; /*현재 브라우저 페이지 폰트의 1.8배*/
+}
+
+.header_menu {
+  display: flex;
+  gap: 4px;
+}
+
+.header_menu_item {
+  padding: 8px 16px; /*위 아래 8px, 왼 오 16px*/
+}
+
+.header_menu_item:hover {
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.header_menu_item.active {
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
 }
