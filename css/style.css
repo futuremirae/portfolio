@@ -373,7 +373,7 @@ button:focus {
   opacity: 0.8;
   transform: translateY(0px);
 }
-.project_title:before {
+.project_title:after {
   content: "";
   display: block;
   position: relative;
