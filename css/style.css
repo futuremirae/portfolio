@@ -88,7 +88,7 @@ button:focus {
   display: flex; /* 나란히 배치 */
   justify-content: space-between; /*요소들 사이에 여백*/
   align-items: center; /*수직정렬*/
-  z-index: 1;
+  z-index: 1; /* 이거 없으면 etc 박스가 스크롤시 위로 올라옴 */
 }
 
 .header_logo {
@@ -335,4 +335,52 @@ button:focus {
 .category:hover .category__count {
   opacity: 1;
   top: 0;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 1배율러 4번 -> 4개 컬럼 */
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+.project {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.project_img {
+  width: 100%;
+}
+
+.project_metadata {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 중간정렬 */
+  align-items: center; /* 한가운데 */
+  transition: all 250ms ease-in;
+  transform: translateY(-10px);
+}
+
+.project_metadata:hover {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+.project_title:before {
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0.5rem 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-accent);
 }
