@@ -337,6 +337,7 @@ button:focus {
   top: 0;
 }
 
+/* Project */
 .projects {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -383,4 +384,39 @@ button:focus {
   width: 50px;
   height: 2px;
   background-color: var(--color-accent);
+}
+
+/* Testimonial */
+
+.testimonials {
+  margin: 3rem;
+}
+
+.testimonial {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.testimonial:nth-child(even) .testimonial__img {
+  order: 1;
+  /* 0부터 시작하므로 1로하면 오른쪽으로 위치 */
+}
+
+.testimonial__img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.testimonial__bubble {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.testimonial__bubble__name {
+  color: var(--color-accent);
+  font-weight: bold;
+  filter: brightness(70%);
 }
