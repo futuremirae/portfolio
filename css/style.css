@@ -15,7 +15,7 @@
   --color-gray: #1b1e26;
 
   /* Size */
-  --sie-max-width: 1200px;
+  --size-max-width: 1200px;
 }
 
 * {
@@ -218,4 +218,47 @@ button:focus {
 .job_period {
   color: var(--color-primary);
   font-size: 0.8rem;
+}
+
+/* Skills */
+
+#skills {
+  background-color: var(--color-primary-variant);
+  color: var(--color-text);
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  /* 6배 4배의 비율로 만들어줌  */
+
+  margin: 2rem 3rem;
+  border-radius: 8px;
+  overflow: hidden;
+  /* 만약 내 자식 요소중에 삐져나오는게 있다면 보이지 않게 해달라~ */
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.skills_title {
+  color: var(--color-accent);
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+.skills_coding {
+  grid-row: span 2;
+  padding: 1rem;
+  background-color: var(--color-primary);
+}
+
+.skills_tools {
+  padding: 1rem;
+}
+
+.skills_etc {
+  padding: 1rem;
+  background-color: var(--color-primary);
+  filter: brightness(150%);
 }
