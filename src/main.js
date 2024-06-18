@@ -3,7 +3,7 @@ const header = document.querySelector(".header");
 const headerHeight = header.getBoundingClientRect().height; // 높이 측정
 
 document.addEventListener("scroll", () => {
-  console.log(window.scrollY);
+  //   console.log(window.scrollY);
   if (window.scrollY > headerHeight) {
     header.classList.add("header--dark");
   } else {
