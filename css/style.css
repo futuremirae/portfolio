@@ -56,7 +56,7 @@ button {
 }
 
 button:focus {
-  outline: 1px solid var(--color-accent);
+  outline: 1px solid transparent;
 }
 /* Commom */
 .section {
@@ -110,13 +110,24 @@ button:focus {
   font-size: 1.8rem; /*현재 브라우저 페이지 폰트의 1.8배*/
 }
 
+.header_toggle {
+  display: none;
+  color: var(--color-white);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1.3rem;
+  right: 1rem;
+}
+
 .header_menu {
   display: flex;
   gap: 4px;
 }
 
 .header_menu_item {
+  display: block;
   padding: 8px 16px; /*위 아래 8px, 왼 오 16px*/
+  border-bottom: 1px solid transparent; /* 내용물이 밀리지 않게 하기 위해 */
 }
 
 .header_menu_item:hover {
@@ -467,7 +478,7 @@ button:focus {
 
 @media screen and (max-width: 768px) {
   .section {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
   }
   .title {
     font-size: 2rem;
@@ -478,17 +489,25 @@ button:focus {
   .header {
     flex-direction: column;
     align-items: start;
+    background-color: var(--color-primary);
   }
   .home_title {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
   }
+  .header_toggle {
+    display: block;
+  }
 
   .header_menu {
+    display: none;
     flex-direction: column;
     text-align: center;
-    padding: 1rem 4rem;
+    margin: 1rem 4rem; /* a태그 이외에 바탕을 선택시 클릭 안됨(padding 으로 할 경우 클릭됨) */
     gap: 1rem;
+  }
+  .header_menu.open {
+    display: flex;
   }
   .header__nav {
     width: 100%;
