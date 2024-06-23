@@ -24,6 +24,9 @@
     border-box: 요소의 전체 너비와 높이에 padding과 border를 포함. 
     */
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Open Sans", sans-serif;
